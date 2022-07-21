@@ -1,0 +1,20 @@
+{
+    "name": "nil/devutils",
+    "description": "Libs for help to develop",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nil Borodulia",
+            "email": "nil.borodulia@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jtrw\\DevUtils\\": "src"
+        }
+    }
+}
