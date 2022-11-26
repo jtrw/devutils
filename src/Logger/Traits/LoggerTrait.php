@@ -49,31 +49,56 @@ trait LoggerTrait
     {
         switch ($level) {
             case LOG_DEBUG:
-                $this->logger->debug($message, $context);
-                
+                $this->d($message, $context);
                 break;
             
             case LOG_INFO:
-                $this->logger->info($message, $context);
-                
+                $this->i($message, $context);
                 break;
             
             case LOG_NOTICE:
                 $this->logger->notice($message, $context);
-                
                 break;
             
             case LOG_WARNING:
                 $this->logger->warning($message, $context);
-                
                 break;
             
             default:
                 throw new LoggerException(sprintf("Try to log invalid message level type '%s'", $level));
-                break;
         }
         
         return $this;
+    }
+    
+    /**
+     * @param string $message
+     * @param array $context
+     * @return void
+     */
+    public function i(string $message, array $context = []): void
+    {
+        $this->logger->info($message, $context);
+    }
+    
+    /**
+     * @param string $message
+     * @param array $context
+     * @return void
+     */
+    public function d(string $message, array $context = []): void
+    {
+        $this->logger->debug($message, $context);
+    }
+    
+    /**
+     * @param string $message
+     * @param array $context
+     * @return void
+     */
+    public function e(string $message, array $context = []): void
+    {
+        $this->logger->error($message, $context);
     }
     
     /**
@@ -103,7 +128,7 @@ trait LoggerTrait
                 break;
             
             case LOG_ERR:
-                $this->logger->error($message, $context);
+                $this->e($message, $context);
                 break;
             
             default:
