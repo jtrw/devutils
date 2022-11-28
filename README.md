@@ -34,9 +34,6 @@ Supported Colors:
 1. yellow
 1. light_gray
 1. white
-```
-
-
 
 ## LoggerTrait
 Use
