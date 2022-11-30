@@ -1,4 +1,7 @@
 # DevUtils
+## Install
+
+`composer require jtrw/devutils`
 
 ## Functions
 ```php
