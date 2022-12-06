@@ -5,27 +5,53 @@ class CliUtils
 {
     public static string $indent = "\033[90G";
     
+    /**
+     * @param string $msg
+     *
+     * @return void
+     */
     public static function e(string $msg): void
     {
         print_r($msg.static::$indent."\033[31;1m[ ERROR ]\033[m\n");
     }
     
+    /**
+     * @param string $msg
+     *
+     * @return void
+     */
     public static function s(string $msg): void
     {
         print_r($msg."\033[90G\033[32;1m[ OK ]\033[m\n");
     }
     
+    /**
+     * @param string $msg
+     *
+     * @return void
+     */
     public static function w(string $msg): void
     {
         print_r($msg."\033[90G\033[33;1m[ Warning ]\033[m\n");
     }
     
+    /**
+     * @param string $msg
+     *
+     * @return void
+     */
     public static function i(string $msg): void
     {
         print_r($msg."\033[90G\033[34;1m[ Info ]\033[m\n");
     }
     
-    public static function color(string $str, string $color = null)
+    /**
+     * @param string $str
+     * @param string|null $color
+     *
+     * @return void
+     */
+    public static function color(string $str, string $color = null): void
     {
         $colors = [];
         $colors['black'] = '0;30';
@@ -50,5 +76,5 @@ class CliUtils
         } else {
             print_r("\033[" . $colors[$color] . "m".$str."\033[0m\n");
         }
-    } // end cout
+    }
 }
