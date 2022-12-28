@@ -8,6 +8,11 @@
 dd(['test' => 1]);
 ```
 
+Transliterate Convert cyr text to lat
+```php
+$str = transliterate($str);
+```
+
 ## CliUtils
 
 ```php
