@@ -48,6 +48,9 @@ if (!defined('LOG_PATH')) {
     define('LOG_PATH', VAR_PATH.'log'.DS);
 }
 
+if (!defined('TESTS_PATH')) {
+    define('TESTS_PATH', ROOT_PATH.'tests'.DS);
+}
 
 if (!defined('ENV_DEV')) {
     define('ENV_DEV', 'dev');
