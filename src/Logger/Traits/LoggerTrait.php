@@ -25,11 +25,8 @@ trait LoggerTrait
     protected LoggerInterface $logger;
     
     /**
-     * ExceptionListener constructor.
-     *
-     * @return $this
-     *
-     * @required
+     * @param LoggerInterface $logger
+     * @return LoggerTrait
      */
     public function setLogger(LoggerInterface $logger): self
     {
